@@ -1,0 +1,20 @@
+.navbar-container {
+  height: 70px;
+  /* center div horizontally */
+  /* width: 50%;
+  margin: 0 auto; */
+  /*                          */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgb(174, 174, 174);
+}
+
+.link {
+  list-style: none;
+  color: white;
+  align-self: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: none;
+}
