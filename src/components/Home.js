@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  const a = 5;
+
   return (
     <>
 

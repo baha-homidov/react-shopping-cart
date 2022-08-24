@@ -1,16 +1,15 @@
 import "../assets/styles/StoreEntryCard.css";
-
+import React from "react";
+import { Link } from "react-router-dom";
 const StoreEntryCard = (props) => {
-  function handlePushToCart() {
-    const item = { name: props.name };
-    props.pushToCart(item);
-  }
-
   return (
-    <div className="entry-card">
-      <h1>{props.name}</h1>
-      <button onClick={handlePushToCart}>Add to cart</button>
-    </div>
+    <>
+      <Link to={`/store/${props.index}`}>
+        <div className="entry-card">
+          <h1>{props.name}</h1>
+        </div>
+      </Link>
+    </>
   );
 };
 
