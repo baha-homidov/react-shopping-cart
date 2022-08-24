@@ -1,0 +1,17 @@
+
+.cart-entry {
+  width: max(700px, 60vw);
+  border: 3px solid red;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+
+.cart-entry > .thumbnail {
+  border: 1px solid blue;
+  width: 180px;
+  height: 180px;
+  grid-row: 1 /3;
+}

@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import CartIcon from "./CartIcon";
+import { Link } from "react-router-dom";
 
 const ProductPage = (props) => {
   const [quantity, setQuantity] = useState(1);
   const item = {
     name: props.name,
     index: props.index,
+    price: props.price
   };
 
   function setCart() {
@@ -38,7 +40,9 @@ const ProductPage = (props) => {
 
   return (
     <>
-    <CartIcon cart={props.cart} />
+      <Link to="/cart">
+        <CartIcon cart={props.cart} />
+      </Link>
       <h1>{props.name}</h1>
       <div className="current-quantity-container">
         <button className="decrement" onClick={decrementQuantity}>

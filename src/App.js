@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Store from "./components/Store";
 import ProductPage from "./components/ProductPage";
+import Cart from "./components/Cart";
 
 function App(props) {
   const [cart, setCart] = useState([]);
@@ -14,10 +15,10 @@ function App(props) {
   }
 
   const storeInventory = [
-    { name: "Shoe 1", index: 0 },
-    { name: "Shoe 2", index: 1 },
-    { name: "Shoe 3", index: 2 },
-    { name: "Shoe 4", index: 3 },
+    { name: "Shoe 1", index: 0, price: 120 },
+    { name: "Shoe 2", index: 1, price: 130 },
+    { name: "Shoe 3", index: 2, price: 140 },
+    { name: "Shoe 4", index: 3, price: 150 },
   ];
 
   return (
@@ -54,13 +55,26 @@ function App(props) {
               />
             );
           })}
+          <Route
+            path="/cart"
+            element={
+              <Cart
+                cart={cart}
+                setCartCallback={setCartCallback}
+                storeInventory={storeInventory}
+              />
+            }
+          />
         </Routes>
       </BrowserRouter>
 
       {cart.map((item, index) => {
         return (
           <>
-            <div>Name: {item.name} Index: {item.index} Quantity: {item.quantity }</div>
+            <div>
+              Name: {item.name} Index: {item.index} Quantity: {item.quantity}{" "}
+              Price: {item.price}
+            </div>
           </>
         );
       })}

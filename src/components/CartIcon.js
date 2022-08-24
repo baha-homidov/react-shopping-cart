@@ -5,7 +5,7 @@ const CartIcon = (props) => {
   props.cart.forEach((element) => {
     itemCount += element.quantity;
   });
-  console.log(itemCount);
+
   return (
     <>
       <button className="cart-icon">Cart: {itemCount }</button>
