@@ -4,8 +4,14 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar-container">
-        <Link to="/" className="link">Home</Link>
-        <Link to="/store" className="link">Store</Link>
+        <ul>
+          <li>
+            <Link className="link" to="/">Home</Link>
+          </li>
+          <li>
+            <Link className="link" to="/store">Store</Link>
+          </li>
+        </ul>
       </div>
     </>
   );

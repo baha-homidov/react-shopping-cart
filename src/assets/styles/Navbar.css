@@ -6,15 +6,46 @@
   /*                          */
   display: flex;
   justify-content: center;
-  gap: 20px;
-  background-color: rgb(174, 174, 174);
+  align-items: center;
+  gap: 50px;
+  background-color: grey;
 }
-
+ul { 
+  padding: 0; 
+  list-style: none; 
+  display: table;
+  text-align: center;
+}
+li { 
+  display: table-cell; 
+  position: relative; 
+  padding: 15px 0;
+}
 .link {
-  list-style: none;
-  color: white;
-  align-self: center;
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 5px 5px;
+  position: relative;
+  margin: 20px;
+}
+.link:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  background: rgb(255, 255, 255);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.link:hover:after { 
+  width: 100%; 
+  left: 0; 
 }

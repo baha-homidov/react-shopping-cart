@@ -1,0 +1,86 @@
+.home-container {
+  min-height: 92vh;
+
+  background-color: #C9C6BD;
+  padding-top: 15vh;
+  padding-left: 10vw;
+  position: relative;
+}
+
+.button > .text {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.home-container > .title {
+  font-size: 7rem;
+  font-weight: bold;
+}
+
+.home-container > .subtitle {
+  color: white;
+  font-size: 4rem;
+}
+
+.home-container > .button, .store-button {
+  margin-top: 30px;
+  display: inline-flex;
+  height: 60px;
+  width: 220px;
+  border: 2px solid #000000;
+  color: #000000;
+  /* color: #BFC0C0; */
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  transition: all .35s ease-Out;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+#dub-arrow {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  left: -235px;
+  position: absolute;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .35s ease-Out;
+  bottom: 0;
+}
+
+.home-container > .button img {
+  width: 20px;
+  height: auto;
+}
+
+.home-container > .button:hover #dub-arrow {
+  left: 0;
+}
+
+.home-container > .button:hover .text {
+  left: 150px;
+}
+
+
+
+.sneaker-img {
+  width: 60vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
