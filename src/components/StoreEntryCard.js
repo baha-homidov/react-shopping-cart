@@ -6,7 +6,9 @@ const StoreEntryCard = (props) => {
     <>
       <Link to={`/store/${props.index}`}>
         <div className="entry-card">
+        <img className="thumbnail" src={props.imgURL} alt="pic" />
           <h1>{props.name}</h1>
+          <h2>Price: {props.price}$</h2>
         </div>
       </Link>
     </>

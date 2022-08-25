@@ -7,7 +7,8 @@ const ProductPage = (props) => {
   const item = {
     name: props.name,
     index: props.index,
-    price: props.price
+    price: props.price,
+    imgURL: props.imgURL
   };
 
   function setCart() {
@@ -38,22 +39,29 @@ const ProductPage = (props) => {
     setQuantity(quantity + 1);
   }
 
+  console.log(props);
+
   return (
     <>
       <Link to="/cart">
         <CartIcon cart={props.cart} />
       </Link>
-      <h1>{props.name}</h1>
-      <div className="current-quantity-container">
-        <button className="decrement" onClick={decrementQuantity}>
-          -
-        </button>
-        <div className="current-quantity">{quantity}</div>
-        <button className="increment" onClick={incrementQuantity}>
-          +
-        </button>
+
+      <div className="product-page-container">
+        <img src={props.imgURL} alt="pic" />
+        <div className="name">{props.name}</div>
+        <div className="price">{props.price}$</div>
+        <div className="current-quantity-container">
+          <button className="decrement" onClick={decrementQuantity}>
+            -
+          </button>
+          <div className="current-quantity">{quantity}</div>
+          <button className="increment" onClick={incrementQuantity}>
+            +
+          </button>
+        </div>
+        <button onClick={setCart}>Add to Cart</button>
       </div>
-      <button onClick={setCart}>Add to Cart</button>
     </>
   );
 };
