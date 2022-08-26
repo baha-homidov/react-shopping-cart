@@ -1,11 +1,13 @@
 .home-container {
   min-height: 92vh;
 
-  background-color: #C9C6BD;
+  background-color: #c9c6bd;
+  background-color: white;
   padding-top: 15vh;
   padding-left: 10vw;
   position: relative;
 }
+
 
 .button > .text {
   text-decoration: none;
@@ -20,11 +22,12 @@
 }
 
 .home-container > .subtitle {
-  color: white;
+  color: #323232;
   font-size: 4rem;
 }
 
-.home-container > .button, .store-button {
+.home-container > .button,
+.store-button {
   margin-top: 30px;
   display: inline-flex;
   height: 60px;
@@ -34,19 +37,18 @@
   /* color: #BFC0C0; */
   text-transform: uppercase;
   text-decoration: none;
-  font-size: .8em;
+  font-size: 0.8em;
   letter-spacing: 1.5px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   position: relative;
   left: 0;
-  transition: all .35s ease-Out;
+  transition: all 0.35s ease-Out;
   position: relative;
   overflow: hidden;
   cursor: pointer;
 }
-
 
 #dub-arrow {
   width: 100%;
@@ -58,7 +60,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all .35s ease-Out;
+  transition: all 0.35s ease-Out;
   bottom: 0;
 }
 
@@ -75,12 +77,10 @@
   left: 150px;
 }
 
-
-
 .sneaker-img {
   width: 60vw;
   position: absolute;
   bottom: 0;
   right: 0;
+  pointer-events: none;
 }
-

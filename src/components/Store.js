@@ -10,17 +10,19 @@ const Store = (props) => {
         <Link to="/cart">
           <CartIcon cart={props.cart} />
         </Link>
-        {props.storeInventory.map((item, index) => {
-          return (
-            <StoreEntryCard
-              {...item}
-              pushToCart={props.pushToCart}
-              className="cart"
-              key={index}
-              index={index}
-            />
-          );
-        })}
+        <div className="card-list-container">
+          {props.storeInventory.map((item, index) => {
+            return (
+              <StoreEntryCard
+                {...item}
+                pushToCart={props.pushToCart}
+                className="cart"
+                key={index}
+                index={index}
+              />
+            );
+          })}
+        </div>
       </div>
     </>
   );

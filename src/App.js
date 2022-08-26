@@ -93,13 +93,13 @@ function App(props) {
       imgURL:
         "https://static1.adidas.com.cn/ecp-product/cdn-image/article/GV9447/product/plp/0/GV9447_SLC_eCom_1660886142123.jpg?im=Resize=(1000,1000)",
     },
-    {
-      name: "Adidas GAZELLE",
-      index: 11,
-      price: 109,
-      imgURL:
-        "https://static1.adidas.com.cn/ecp-product/cdn-image/article/BB5487/product/plp/0/BB5487_SLC_eCom_1660900958372.jpg?im=Resize=(1000,1000)",
-    },
+    // {
+    //   name: "Adidas GAZELLE",
+    //   index: 11,
+    //   price: 109,
+    //   imgURL:
+    //     "https://static1.adidas.com.cn/ecp-product/cdn-image/article/BB5487/product/plp/0/BB5487_SLC_eCom_1660900958372.jpg?im=Resize=(1000,1000)",
+    // },
     {
       name: "Adidas OZELIA",
       index: 12,
