@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CartIcon from "./CartIcon";
 import { Link } from "react-router-dom";
+import "../assets/styles/ProductPage.css";
 
 const ProductPage = (props) => {
   const [quantity, setQuantity] = useState(1);
@@ -8,7 +9,7 @@ const ProductPage = (props) => {
     name: props.name,
     index: props.index,
     price: props.price,
-    imgURL: props.imgURL
+    imgURL: props.imgURL,
   };
 
   function setCart() {
@@ -48,19 +49,22 @@ const ProductPage = (props) => {
       </Link>
 
       <div className="product-page-container">
-        <img src={props.imgURL} alt="pic" />
-        <div className="name">{props.name}</div>
-        <div className="price">{props.price}$</div>
-        <div className="current-quantity-container">
-          <button className="decrement" onClick={decrementQuantity}>
-            -
-          </button>
-          <div className="current-quantity">{quantity}</div>
-          <button className="increment" onClick={incrementQuantity}>
-            +
-          </button>
+        <img className="thumbnail" src={props.imgURL} alt="pic" />
+
+        <div className="description-container">
+          <div className="name">{props.name}</div>
+          <div className="price">{props.price} $</div>
+          <div className="current-quantity-container">
+            <button className="decrement" onClick={decrementQuantity}>
+              -
+            </button>
+            <div className="current-quantity">{quantity}</div>
+            <button className="increment" onClick={incrementQuantity}>
+              +
+            </button>
+          </div>
+          <button className="add-to-cart" onClick={setCart}>Add to Cart</button>
         </div>
-        <button onClick={setCart}>Add to Cart</button>
       </div>
     </>
   );

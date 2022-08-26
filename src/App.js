@@ -9,7 +9,17 @@ import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 
 function App(props) {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState([
+    // TODO: Set array to empty when deploying
+    {
+      quantity: 1,
+      name: "Adidas SUPERSTAR Leather Head",
+      index: 1,
+      price: 139,
+      imgURL:
+        "https://static1.adidas.com.cn/ecp-product/cdn-image/article/HQ6456/product/plp/0/HQ6456_SLC_eCom_1660704372994.jpg?im=Resize=(1000,1000)",
+    }
+  ]);
 
   function setCartCallback(newCart) {
     setCart(newCart);

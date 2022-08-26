@@ -28,8 +28,8 @@ const Cart = (props) => {
   if (props.cart.length === 0) {
     // if the cart is empty
     return (
-      <div className="cart-container">
-        <h1>Cart is empty</h1>
+      <div className="cart-container-empty">
+        <div>Your cart is empty</div>
         <Link to="/store">
           <button>Go Shopping!</button>
         </Link>
@@ -43,8 +43,8 @@ const Cart = (props) => {
             <div className="cart-entry">
               <img src={element.imgURL} className="thumbnail" alt="pic" />
               <div className="name">{element.name}</div>
+              <div className="price">$ {element.price}</div>
               <div className="quantity-container">
-                <div className="quantity">Quantity: {element.quantity}</div>
                 <button
                   onClick={() => {
                     decrementItemCount(index);
@@ -52,6 +52,7 @@ const Cart = (props) => {
                 >
                   -
                 </button>
+                <div className="quantity">{element.quantity}</div>
                 <button
                   onClick={() => {
                     incrementItemCount(index);
@@ -63,15 +64,21 @@ const Cart = (props) => {
             </div>
           );
         })}
-        <h1 className="total-sum">Total: {totalSum}</h1>
-        <Link to="/checkout">
-          <button onClick={
-            () => {
-              const newCart = [];
-              props.setCartCallback(newCart);
-            }
-          } className="checkout">Proceed to checkout</button>
-        </Link>
+
+        <div className="container">
+          <h1 className="total-sum">Total: $   {totalSum}</h1>
+          <Link to="/checkout">
+            <button
+              onClick={() => {
+                const newCart = [];
+                props.setCartCallback(newCart);
+              }}
+              className="checkout"
+            >
+              Proceed to checkout
+            </button>
+          </Link>
+        </div>
       </div>
     );
   }
