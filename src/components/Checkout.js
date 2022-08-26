@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
+import "../assets/styles/Checkout.css"
 const Checkout = () => {
   return (
     <div className="checkout-container">
-      <h1>Thank you for your purchase!</h1>
+      <div>Thank you for your purchase!</div>
       <Link to="/store">
         <button>Go back to shopping</button>
       </Link>
