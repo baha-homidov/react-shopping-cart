@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -121,7 +121,7 @@ function App(props) {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
 
         <Routes>
@@ -168,7 +168,7 @@ function App(props) {
             element={<Checkout />}
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
